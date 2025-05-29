@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brain Wave - بوابتك الذكية الشاملة</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
+      color: #333;
+      direction: rtl;
+    }
+    header, section, footer {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    header {
+      background: #d1e7ff;
+      text-align: center;
+      border-bottom: 2px solid #3399ff;
+    }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #3366cc;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #003366;
+    }
+    h1, h2 {
+      font-weight: 700;
+    }
+    .feature {
+      background: #fff;
+      margin: 20px 0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    form {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    input[type="text"], select {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      background: #3399ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #1a73e8;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    li {
+      margin: 6px 0;
+      padding: 6px 10px;
+      background: #e6f0ff;
+      border-radius: 6px;
+    }
+    li a {
+      color: #0066cc;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    li a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 15px 10px;
+      border-top: 1px solid #ccc;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Brain Wave - بوابتك الذكية الشاملة</h1>
+    <nav>
+      <a href="#jobs">الوظائف</a>
+      <a href="#files">الملفات</a>
+      <a href="#markets">الأسواق المالية</a>
+      <a href="#education">التعليم</a>
+      <a href="#affiliate">الربح والعروض</a>
+      <a href="#chat">الدردشة</a>
+    </nav>
+  </header>
+
+  <section id="jobs" class="feature">
+    <h2>جلب الوظائف والتقديم</h2>
+    <p>أضف روابط مواقع الوظائف يدويًا وسيتم عرضها مباشرة.</p>
+    <form id="jobForm">
+      <input type="text" id="jobLink" placeholder="أدخل رابط موقع وظيفة" required />
+      <button type="submit">إضافة</button>
+    </form>
+    <ul id="jobList"></ul>
+  </section>
+
+  <section id="files" class="feature">
+    <h2>توليد الملفات الذكية</h2>
+    <p>دعم توليد ملفات Word, Excel, PDF، PowerPoint، AutoCAD والمزيد بجميع اللغات.</p>
+    <p><i>(الميزة في طور التطوير والتكامل مع API متقدمة)</i></p>
+  </section>
+
+  <section id="markets" class="feature">
+    <h2>تحليل الأسواق المالية</h2>
+    <p>فوركس، أسهم، عملات رقمية، بالصور والبيانات مع تحديثات مستمرة.</p>
+    <p><i>(سيتم دمج ذكاء اصطناعي لتحليل السوق في التحديثات القادمة)</i></p>
+  </section>
+
+  <section id="education" class="feature">
+    <h2>خدمات تعليمية متكاملة</h2>
+    <p>أبحاث، مسائل جامعية، سيرة ذاتية، ترجمة، تصحيح لغوي، حل مسائل في الطب والكيمياء والرياضيات.</p>
+  </section>
+
+  <section id="affiliate" class="feature">
+    <h2>عروض وكوبونات ربحية</h2>
+    <p>ترويج تلقائي لمنتجات، خصومات، أفلييت، دروب شوبنق مع كوبونات حصرية.</p>
+  </section>
+
+  <section id="chat" class="feature">
+    <h2>الدردشة الذكية</h2>
+    <p>تواصل مباشرة معنا لطلب خدمات إضافية مثل تصميم وبرمجة وإضافة مميزات خاصة.</p>
+  </section>
+
+  <footer>
+    <p>تم العمل بالذكاء الاصطناعي وفكرة م. عبدالرحمن محمد الرشيد</p>
+  </footer>
+
+  <script>
+    const jobForm = document.getElementById('jobForm');
+    const jobList = document.getElementById('jobList');
+
+    jobForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const link = document.getElementById('jobLink').value.trim();
+      if (link) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link;
+        a.target = '_blank';
+        a.textContent = link;
+        li.appendChild(a);
+        jobList.appendChild(li);
+        jobForm.reset();
+      }
+    });
+  </script>
+</body>
+</html>
