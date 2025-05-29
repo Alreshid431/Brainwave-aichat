@@ -175,3 +175,132 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainWave AI - بوابتك الذكية الشاملة</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+      color: #333;
+      direction: rtl;
+    }
+    header {
+      background: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .feature {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 16px;
+      background: #0074d9;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      background: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    h2 {
+      color: #001f3f;
+    }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BrainWave AI - منصتك الذكية المجانية</h1>
+    <nav>
+      <a href="#jobs">الوظائف</a>
+      <a href="#files">الملفات</a>
+      <a href="#markets">الأسواق</a>
+      <a href="#education">التعليم</a>
+      <a href="#affiliate">الربح</a>
+    </nav>
+  </header>  <div class="container">
+    <section id="jobs" class="feature">
+      <h2>جلب الوظائف والتقديم الآلي</h2>
+      <p>أضف روابط مواقع الوظائف أو اجعل الذكاء الاصطناعي يبحث عنها ويعرضها:</p>
+      <form id="jobForm">
+        <input type="text" id="jobLink" placeholder="أدخل رابط موقع وظيفة" required />
+        <button type="submit">إضافة</button>
+      </form>
+      <ul id="jobList"></ul>
+    </section><section id="files" class="feature">
+  <h2>توليد الملفات الذكية</h2>
+  <p>Word، Excel، PDF، PowerPoint، AutoCAD، صور احترافية.</p>
+</section>
+
+<section id="markets" class="feature">
+  <h2>تحليل الأسواق</h2>
+  <p>تحليل فوري وتوقعات للبتكوين، العملات، الأسهم مع نشر التوصيات.</p>
+</section>
+
+<section id="education" class="feature">
+  <h2>خدمات تعليمية</h2>
+  <p>حل مسائل، أبحاث، ترجمة، تصحيح لغوي، دعم جميع التخصصات.</p>
+</section>
+
+<section id="affiliate" class="feature">
+  <h2>عروض ربحية تلقائية</h2>
+  <p>نشر تلقائي لكوبونات وتخفيضات ماركات عالمية، شوبيفاي، شين، زارا، وغيرها.</p>
+</section>
+
+  </div>  <footer>
+    <p>تم العمل بواسطة الذكاء الاصطناعي - فكرة وإشراف: م. عبدالرحمن محمد الرشيد</p>
+  </footer>  <script>
+    const jobForm = document.getElementById('jobForm');
+    const jobList = document.getElementById('jobList');
+
+    jobForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const link = document.getElementById('jobLink').value.trim();
+      if (link) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link;
+        a.target = '_blank';
+        a.textContent = link;
+        li.appendChild(a);
+        jobList.appendChild(li);
+        jobForm.reset();
+      }
+    });
+  </script></body>
+</html>
